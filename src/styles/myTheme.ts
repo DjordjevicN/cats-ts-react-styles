@@ -11,6 +11,11 @@ const myTheme: DefaultTheme = {
     medium: "8xp",
     large: "15xp",
   },
+  fontSizes: {
+    paragraph: "16px",
+    title: "36px",
+    sutText: "24px",
+  },
 };
 
 export { myTheme };

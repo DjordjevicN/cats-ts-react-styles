@@ -14,5 +14,10 @@ declare module "styled-components" {
       medium: string;
       large: string;
     };
+    fontSizes: {
+      paragraph: string;
+      title: string;
+      sutText: string;
+    };
   }
 }
