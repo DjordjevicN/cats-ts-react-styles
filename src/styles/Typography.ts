@@ -1,12 +1,20 @@
-import styled, { DefaultTheme } from "styled-components";
-
+import styled, { css } from "styled-components";
+import { myTheme } from "../styles/myTheme";
 interface HeadingProps {
-  theme: DefaultTheme;
+  isActive?: boolean;
+  center?: boolean;
+}
+interface ParagraphProps {
+  primary?: boolean;
 }
 
-export const H1 = styled.h1<{ HeadingProps }>`
+export const H1 = styled.h1<HeadingProps>`
+  font-family: "Inter", sans-serif;
   font-size: 36px;
-  color: blue;
+  padding-right: 10px;
+  text-align: ${(props) => (props.center ? "center" : "left")};
+  color: ${(props) =>
+    props.isActive ? myTheme.colors.secondary : myTheme.colors.main};
 `;
 export const H2 = styled(H1)`
   font-size: 24px;
@@ -24,6 +32,12 @@ export const H6 = styled(H1)`
   font-size: 11px;
 `;
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.p<ParagraphProps>`
+  font-family: "Inter", sans-serif;
   color: black;
+  ${(props) =>
+    props.primary &&
+    css`
+      color: ${myTheme.colors.main};
+    `}
 `;
