@@ -12,9 +12,9 @@ const myTheme: DefaultTheme = {
     large: "15xp",
   },
   fontSizes: {
-    paragraph: "16px",
     title: "36px",
     sutText: "24px",
+    paragraph: "16px",
   },
 };
 
