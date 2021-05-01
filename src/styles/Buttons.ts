@@ -12,7 +12,7 @@ export const Button = styled.button<ButtonProps>`
   color: white;
   border-radius: ${(props) => (props.round ? "30px" : "0")};
   border: none;
-  padding: 15px 41px;
+  padding: 15px 42px;
   margin-top: 10px;
   cursor: pointer;
   transition: 0.3s;
